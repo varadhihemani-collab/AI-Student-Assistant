@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Student Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>🤖 AI Student Assistant</h1>
+        <p>Your Smart Study & Career Companion</p>
+    </header>
+
+    <main>
+
+        <!-- FEATURES -->
+        <section class="features">
+
+            <div class="card">
+                <h3>🤖 AI Chat</h3>
+                <p>Ask questions and get helpful answers.</p>
+                <button onclick="openFeature('chat')">Start</button>
+            </div>
+
+            <div class="card">
+                <h3>📚 Study Plan</h3>
+                <p>Create a simple study plan.</p>
+                <button onclick="openFeature('plan')">Create</button>
+            </div>
+
+            <div class="card">
+                <h3>📝 Notes Summary</h3>
+                <p>Turn long notes into simple points.</p>
+                <button onclick="openFeature('notes')">Summarize</button>
+            </div>
+
+            <div class="card">
+                <h3>💼 Career Helper</h3>
+                <p>Get skills and career suggestions.</p>
+                <button onclick="openFeature('career')">Explore</button>
+            </div>
+
+        </section>
+
+
+        <!-- AI CHAT -->
+        <section id="chatSection" class="panel">
+
+            <h2>🤖 AI Chat</h2>
+
+            <input
+                type="text"
+                id="question"
+                placeholder="Ask: how to focus, exam, resume, coding..."
+            >
+
+            <button id="askButton">Ask</button>
+
+            <button id="clearChat">🗑️ Clear History</button>
+
+            <div id="answer"></div>
+
+        </section>
+
+
+        <!-- STUDY PLAN -->
+        <section id="planSection" class="panel">
+
+            <h2>📚 Study Plan</h2>
+
+            <input
+                id="subjects"
+                placeholder="Subjects, separated by commas"
+            >
+
+            <input
+                id="days"
+                type="number"
+                min="1"
+                max="30"
+                value="7"
+                placeholder="Days left"
+            >
+
+            <button id="makePlan">Create plan</button>
+
+            <div id="planOut"></div>
+
+        </section>
+
+
+        <!-- NOTES SUMMARY -->
+        <section id="notesSection" class="panel">
+
+            <h2>📝 Notes Summary</h2>
+
+            <textarea
+                id="notesText"
+                placeholder="Paste your notes here..."
+            ></textarea>
+
+            <button id="summarize">Summarize</button>
+
+            <div id="notesOut"></div>
+
+        </section>
+
+
+        <!-- CAREER HELPER -->
+        <section id="careerSection" class="panel">
+
+            <h2>💼 Career Helper</h2>
+
+            <select id="field">
+
+                <!-- Existing options -->
+                <option value="web">Web Development</option>
+                <option value="data">Data Science & AI</option>
+                <option value="cyber">Cybersecurity</option>
+                <option value="govt">Government Jobs</option>
+
+                <!-- New options -->
+                <option value="python">Python Development</option>
+                <option value="java">Java Development</option>
+                <option value="app">App Development</option>
+                <option value="cloud">Cloud Computing</option>
+                <option value="testing">Software Testing</option>
+                <option value="uiux">UI/UX Design</option>
+
+            </select>
+
+            <button id="showCareer">
+                Show roadmap
+            </button>
+
+            <div id="careerOut"></div>
+
+        </section>
+
+
+        <!-- RESULT -->
+        <section
+            id="result"
+            class="panel"
+            style="display:block"
+        >
+
+            <h2>Let's get started 🚀</h2>
+
+            <p>Select a feature above.</p>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+    <footer>
+        <p>AI Student Assistant © 2026</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
